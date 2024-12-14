@@ -22,4 +22,18 @@ You can find more information on extending PMD in the following link: https://pm
 Use your rule with different projects and describe you findings below. See the [instructions](../sujet.md) for suggestions on the projects to use.
 
 ## Answer
-
++ Findings from Using the Custom PMD Rule on Different Projects :
+  - I applied the custom PMD rule TooManyNestedIfs, which detects methods with three or more nested if statements, to two different open-source projects: Commons Math and Commons Lang. Below are the findings:
+  1 - Commons Math :
+    File: .\commons-math-transform\src\test\java\org\apache\commons\math4\transform\FastSineTransformerTest.java
+    Line 139: The method contains more than three nested if statements, violating the rule.
+    File: .\src\userguide\java\org\apache\commons\math4\userguide\genetics\Polygon.java
+    Line 86: The method contains more than three nested if statements, violating the rule.
+  2 - Commons Lang :
+    File: .\src\main\java\org\apache\commons\lang3\text\StrBuilder.java
+    Line 2456: The method contains more than three nested if statements.
+    Line 2491: The method contains more than three nested if statements.
+    Line 2711: The method contains more than three nested if statements.
+    Line 2802: The method contains more than three nested if statements.
+    Line 2866: The method contains more than three nested if statements.
+  

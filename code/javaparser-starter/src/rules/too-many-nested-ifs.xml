@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="Custom Rules" xmlns="http://pmd.sourceforge.net/ruleset/1.0.0">
+    <description>
+        This rule detects the use of three or more nested 'if' statements in Java programs.
+    </description>
+
+    <rule name="TooManyNestedIfs"
+          language="java"
+          message="Method contains too many nested 'if' statements."
+          class="net.sourceforge.pmd.lang.rule.xpath.XPathRule">
+        <description>
+            This rule detects methods with three or more nested 'if' statements.
+        </description>
+        <priority>2</priority>
+        <properties>
+            <property name="xpath" value="//MethodDeclaration[count(.//IfStatement) >= 3]" />
+        </properties>
+    </rule>
+</ruleset>
